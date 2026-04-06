@@ -27,6 +27,80 @@
   box-sizing: border-box;
 }
 
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modalSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes backdropFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.toggle-btn {
+  transition: opacity 150ms, transform 150ms, background 220ms !important;
+}
+
+.toggle-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.checkbox-btn:hover {
+  border-color: #7367f0 !important;
+  background: rgba(115, 103, 240, 0.08) !important;
+}
+
+.checkbox-btn:checked,
+.checkbox-btn[aria-checked="true"]:hover {
+  background: #6058e0 !important;
+}
+
+.data-source-option:hover {
+  background: rgba(115, 103, 240, 0.04) !important;
+  border-radius: 6px;
+}
+
+.model-cell:hover {
+  background: rgba(115, 103, 240, 0.06) !important;
+}
+
+.number-input:hover {
+  border-color: #7367f0 !important;
+}
+
+.number-input:focus {
+  border-color: #7367f0 !important;
+  box-shadow: 0 0 0 3px rgba(115, 103, 240, 0.12) !important;
+}
+
+.goal-card:hover {
+  border-color: #7367f0 !important;
+  background: rgba(115, 103, 240, 0.04) !important;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-page);
